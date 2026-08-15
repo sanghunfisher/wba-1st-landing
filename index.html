@@ -78,7 +78,9 @@
     }
     // 접수 endpoint: 04_automation/apps-script/WBA_LEAD_INTAKE.js 를 시트에 붙이고
     // 웹 앱으로 배포한 뒤 그 URL 을 여기에 넣는다. null 이면 전화·이메일 안내만 뜬다.
-    var FORM_ENDPOINT = null;
+    // 배포는 완료했으나 bodycodi.com 워크스페이스 관리자 정책이 익명 웹앱 접속을
+    // 막고 있어(HTTP 403) 관리자가 허용 설정을 켤 때까지는 실제 접수가 안 된다.
+    var FORM_ENDPOINT = 'https://script.google.com/macros/s/AKfycbyOPvYB04Lo87snlo5NKUiAN_OVrgZ-9vWLbrlf5S7gtDsjGSi1Papj_aZSGcuwXdnMdQ/exec';
     var LEAD_SOURCE = 'CRM공지';   // 시트 '유입경로' 칸에 찍히는 값 (원본 페이지는 '카카오채널')
     var msg = document.createElement('p');
     msg.className = 'form-success';
